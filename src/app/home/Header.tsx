@@ -1,10 +1,40 @@
+"use client";
+import Button from "@/components/common/Button";
+import Customer from "@/components/template/Customer";
 import Metal from "@/components/template/Metal";
-import {url} from "inspector";
-import React from "react";
+import Link from "next/link";
+import React, {useState} from "react";
+
+let custom = [
+  {
+    name: "Customer",
+    url: "/",
+  },
+  {
+    name: "Installer",
+    url: "/",
+  },
+];
 
 function Header() {
+  const [tab, setTab] = useState(0);
   return (
     <div className="container">
+      <div className="inline-block mb-11">
+        <div className="flex gap-1 bg-cyan-950 py-1 px-1 rounded-xl">
+          {custom.map((item, index) => (
+            <div key={index}>
+              <Link href={item.url}>
+                <Customer
+                  handelClick={() => setTab(index)}
+                  isActive={tab === index}
+                  name={item.name}
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="mb-12">
         <div className="flex justify-between gap-10 mb-12">
           <div>
@@ -21,7 +51,7 @@ function Header() {
             <img src="/picture/Group 26.png" alt="" />
           </div>
         </div>
-        <div className="bg-red-500 px-9 pb-6 rounded-md">
+        <div className="bg-red-500 px-9 py-6 rounded-md">
           <div className="text-3xl font-bold text-gray-50 text-center">
             Tell us more about your roof.
           </div>

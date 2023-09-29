@@ -51,6 +51,11 @@ const config: Config = {
       "ibm-plex-sans": ["'IBM Plex Sans'", ...fontFamily.sans],
       "ibm-plex-mono": ["'IBM Plex Mono'", ...fontFamily.sans],
     },
+    backgroundImage: {
+      100: "radial-gradient(422.58% 100% at 0% 50.12%, #FE5424 0%, #0C0C45 100%)",
+      200: "radial-gradient(90.94% 150% at 0% 60%, #FE5424 0%, #0C0C45 100%)",
+    },
+
     container: {
       center: true,
       padding: {
