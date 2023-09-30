@@ -7,7 +7,7 @@ interface mateiral {
 function Metal(props: mateiral) {
   return (
     <div>
-      <div className="text-2xl font-semibold py-16 px-12 max-w-[150px]">
+      <div className="md:text-2xl text-xl font-semibold p-4 aspect-square w-[150px] grid place-content-center m-auto text-center">
         {props.name}
       </div>
     </div>

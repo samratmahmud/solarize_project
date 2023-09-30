@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        slate: {"300": "#D1D5DB"},
+        slate: {"100": "#DDD", "200": "#F9FAFB", "300": "#D1D5DB"},
         gray: {
           "50": "#ffffff",
           "100": "#F5F5F5",
@@ -22,7 +22,7 @@ const config: Config = {
         neutral: {"500": "#68958D", "600": "#6B7280", "700": "#4B5563"},
         red: {"500": "#FE5424"},
         cyan: {"900": "#15357A", "950": "#0D3251", "800": "#0A2742"},
-        indigo: {"600": "#4F46E5"},
+        indigo: {"200": "#E0E7FF", "600": "#4F46E5"},
       },
     },
     fontSize: {
@@ -39,12 +39,16 @@ const config: Config = {
       "6xl": ["48px", {lineHeight: "1.4em"}],
       "7xl": ["60px", {lineHeight: "1em"}],
       "8xl": ["88px", {lineHeight: "1.03em"}],
+      "9xl": ["75px", {lineHeight: "1.03em"}],
+      "30": ["30px", {lineHeight: "36px", letterSpacing: "-0.75px"}],
     },
     shadows: {
       sm: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       md: "0px 1px 2px rgba(0, 0, 0, 0.05)",
       lg: "0px 1px 2px rgba(0, 0, 0, 0.06)",
       xl: "0px 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "2xl":
+        "0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10)",
     },
     fontFamily: {
       inter: ["'Inter'", ...fontFamily.sans],
@@ -52,8 +56,8 @@ const config: Config = {
       "ibm-plex-mono": ["'IBM Plex Mono'", ...fontFamily.sans],
     },
     backgroundImage: {
-      100: "radial-gradient(422.58% 100% at 0% 50.12%, #FE5424 0%, #0C0C45 100%)",
-      200: "radial-gradient(90.94% 150% at 0% 60%, #FE5424 0%, #0C0C45 100%)",
+      100: "linear-gradient(270deg, #0C0C45 0.22%, #FE5424 50.74%)",
+      200: "radial-gradient(90.94% 190% at 0% 60%, #FE5424 0%, #0C0C45 100%)",
     },
 
     container: {
@@ -65,8 +69,8 @@ const config: Config = {
     screens: {
       sm: "600px",
       md: "768px",
-      lg: "1271px",
-      xl: "1512px",
+      lg: "1024px",
+      xl: "1248px",
     },
   },
   plugins: [],

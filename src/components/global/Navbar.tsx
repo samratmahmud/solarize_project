@@ -1,21 +1,65 @@
+"use client";
 import React from "react";
 import Button from "../common/Button";
+import Link from "next/link";
+import Drawer from "react-modern-drawer";
+import "react-modern-drawer/dist/index.css";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <div className="container">
-      <div className="flex justify-between items-center mt-5 mb-12">
+      <div className="flex justify-between gap-3 items-center pt-5 mb-12">
         <div>
-          <img src="/picture/sunrya-dark.svg.svg" alt="" />
+          <Link href={"/"}>
+            <img src="/picture/sunrya-dark.svg.svg" alt="" />
+          </Link>
         </div>
-        <div className="flex items-center gap-5">
-          <div className="font-medium">
-            <Button name="Contact Us" />
-          </div>
-          <div className="bg-red-500 rounded-md font-bold text-gray-50">
-            <Button name="Get Started" />
+        <div className="hidden md:block">
+          <div className="flex items-center md:gap-5 gap-2">
+            <div className="font-medium flex-shrink-0">
+              <Link href={"/contract"}>
+                <Button name="Contact Us" />
+              </Link>
+            </div>
+            <div className="bg-red-500 rounded-md font-bold text-gray-50 flex-shrink-0">
+              <Link href={"/"}>
+                <Button name="Get Started" />
+              </Link>
+            </div>
           </div>
         </div>
+        <div
+          onClick={toggle}
+          className="text-2xl font-bold text-gray-950 cursor-pointer md:hidden"
+        >
+          Menu
+        </div>
+      </div>
+      <div className="">
+        <Drawer open={isOpen} onClose={toggle} direction="left">
+          <div className="p-6 h-screen flex flex-col justify-between">
+            <div className="flex flex-col gap-10 text-center">
+              <div className="font-medium">
+                <Link href={""} className="bg-gray-400">
+                  <Button name="Contact Us" />
+                </Link>
+              </div>
+              <div className="bg-red-500 rounded-md font-bold text-gray-50">
+                <Link href={""}>
+                  <Button name="Get Started" />
+                </Link>
+              </div>
+            </div>
+            <div className="md:text-md text-xs text-gray-400 text-center">
+              © 2023 Sunrya, Ltd. All rights reserved
+            </div>
+          </div>
+        </Drawer>
       </div>
     </div>
   );

@@ -5,61 +5,37 @@ import Metal from "@/components/template/Metal";
 import Link from "next/link";
 import React, {useState} from "react";
 
-let custom = [
-  {
-    name: "Customer",
-    url: "/",
-  },
-  {
-    name: "Installer",
-    url: "/",
-  },
-];
-
 function Header() {
-  const [tab, setTab] = useState(0);
   return (
     <div className="container">
-      <div className="inline-block mb-11">
-        <div className="flex gap-1 bg-cyan-950 py-1 px-1 rounded-xl">
-          {custom.map((item, index) => (
-            <div key={index}>
-              <Link href={item.url}>
-                <Customer
-                  handelClick={() => setTab(index)}
-                  isActive={tab === index}
-                  name={item.name}
-                />
-              </Link>
-            </div>
-          ))}
-        </div>
+      <div className="inline-block md:mb-11 mb-6">
+        <Customer activateButton="Customer" />
       </div>
-      <div className="mb-12">
-        <div className="flex justify-between gap-10 mb-12">
+      <div className="md:mb-12 mb-6">
+        <div className="flex flex-col md:flex-row justify-between md:gap-10 gap-5 md:mb-12 mb-6">
           <div>
-            <div className="text-8xl font-bold text-red-500 mb-16">
+            <div className="xl:text-8xl md:text-9xl text-5xl font-bold text-red-500 md:mb-16 mb-6 max-w-[650px]">
               Offset your electricity bill, with solar.
             </div>
-            <div className="text-lg font-medium text-cyan-950 max-w-[514px]">
+            <div className="md:text-lg text-md font-medium text-cyan-950 max-w-[514px]">
               Solar installation, financing, management, and operations all in
               one platform, to skip the middleman and deliver better, faster &
               cheaper solar.{" "}
             </div>
           </div>
-          <div className="flex-shrink-0">
+          <div>
             <img src="/picture/Group 26.png" alt="" />
           </div>
         </div>
-        <div className="bg-red-500 px-9 py-6 rounded-md">
-          <div className="text-3xl font-bold text-gray-50 text-center">
+        <div className="bg-red-500 md:px-9 px-4 md:py-6 py-3 rounded-md">
+          <div className="md:text-3xl text-base font-bold text-gray-50 lg:text-center md:mb-9 mb-4">
             Tell us more about your roof.
           </div>
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-6xl font-bold text-gray-50 max-w-[259px]">
+          <div className="flex lg:flex-row  flex-col lg:items-center justify-between gap-4">
+            <div className="md:text-6xl text-30 font-bold text-gray-50 lg:max-w-[259px]">
               Get a lightning fast quote
             </div>
-            <div className="flex gap-5">
+            <div className="flex flex-wrap gap-5">
               <div
                 className="inline-block rounded-lg text-cyan-800"
                 style={{backgroundImage: `url("/picture/3-1.jpg.png")`}}

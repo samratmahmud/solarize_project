@@ -4,7 +4,7 @@ import React from "react";
 function Platform() {
   return (
     <div className="container">
-      <div className="flex flex-col gap-12 mb-36">
+      <div className="flex flex-col gap-12 md:mb-36 mb-16">
         <Middelman
           name="Skip the middleman and onboard in 1 minute."
           title="Our platform connects you directly with local solar installers, eliminating the need for a middleman and saving you money. Our online onboarding process is quick and easy, allowing you to get started with solar without the hassle of paperwork or in-person meetings."
