@@ -14,7 +14,7 @@ function TextField(props: TextFieldProps) {
         {label} {required && <span className="text-red-500">*</span>}
       </div>
       <input
-        className="py-2 w-full focus:outline-none px-3"
+        className="md:py-2 py-1 w-full focus:outline-none px-3"
         type="text"
         placeholder=""
         required={required}

@@ -22,7 +22,7 @@ function ContractFrom() {
           </div>
         </div>
         <div>
-          <div className="lg:max-w-[580px] border border-slate-100 rounded-md shadow-sm md:p-5 py-5 px-3 mb-5">
+          <div className="lg:max-w-[580px] border border-slate-100 rounded-md shadow-lg md:p-5 py-5 px-3 mb-5">
             <div className="grid grid-cols-5 gap-5">
               <div className="col-span-2">
                 <TextField label="First Name" required />

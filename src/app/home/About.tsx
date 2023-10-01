@@ -49,7 +49,7 @@ function About() {
               key={index}
               className="flex md:flex-row flex-col md:even:flex-row-reverse md:gap-12 gap-5 justify-between items-center"
             >
-              <div>
+              <div className="md:w-1/2">
                 <img src={item.pic} alt="" />
               </div>
               <div>
@@ -59,7 +59,7 @@ function About() {
                 <div className="md:text-30 text-xl text-gray-900 md:mb-4 mb-2 font-bold">
                   {item.name}
                 </div>
-                <div className="md:text-base text-md text-neutral-600 mb-7 max-w-[489px]">
+                <div className="md:text-base text-md text-neutral-600 mb-7 max-w-[495px]">
                   {item.title}
                 </div>
                 <div className="bg-red-500 py-2 px-4 rounded-md inline-block">

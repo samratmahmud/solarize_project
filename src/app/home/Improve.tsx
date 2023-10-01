@@ -80,10 +80,7 @@ function Improve() {
                 Check our use cases and find what works for you!
               </div>
             </div>
-            <div
-              role="button"
-              className="bg-gray-50 rounded-xl w-full text-center"
-            >
+            <div role="button" className="bg-gray-50 rounded-xl text-center">
               <Button name="Learn More" />
             </div>
           </div>

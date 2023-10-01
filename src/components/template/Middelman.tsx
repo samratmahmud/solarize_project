@@ -26,7 +26,7 @@ function Middelman(props: mansProps) {
           {learn}
         </Link>
       </div>
-      <div className="flex_[0_0_50%]">
+      <div className="md:w-1/2">
         <img src={pic} alt="" />
       </div>
     </div>

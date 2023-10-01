@@ -27,7 +27,7 @@ function Header() {
             <img src="/picture/Group 26.png" alt="" />
           </div>
         </div>
-        <div className="bg-red-500 md:px-9 px-4 md:py-6 py-3 rounded-md">
+        <div className="bg-red-500 md:px-9 px-4 md:py-6 py-5 rounded-md">
           <div className="md:text-3xl text-base font-bold text-gray-50 lg:text-center md:mb-9 mb-4">
             Tell us more about your roof.
           </div>
@@ -37,30 +37,30 @@ function Header() {
             </div>
             <div className="flex flex-wrap gap-5">
               <div
-                className="inline-block rounded-lg text-cyan-800"
+                className="inline-block w-full md:w-[150px] rounded-lg text-cyan-800"
                 style={{backgroundImage: `url("/picture/3-1.jpg.png")`}}
               >
                 <Metal name="Metal" />
               </div>
               <div
-                className="inline-block rounded-lg text-gray-50"
+                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
                 style={{backgroundImage: `url("/picture/3-2.jpg.png")`}}
               >
                 <Metal name="Concrete" />
               </div>
               <div
-                className="inline-block rounded-lg text-gray-50"
+                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
                 style={{backgroundImage: `url("/picture/3-3.jpg.png")`}}
               >
                 <Metal name="Ground" />
               </div>
               <div
-                className="inline-block rounded-lg text-gray-50"
+                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
                 style={{backgroundImage: `url("/picture/dont-know.png.png")`}}
               >
                 <Metal name="Parking" />
               </div>
-              <div className="inline-block rounded-lg text-cyan-800 bg-white">
+              <div className="inline-block rounded-lg text-cyan-800 bg-white w-full md:w-[150px] bg-no-repeat bg-cover">
                 <Metal name="Other" />
               </div>
             </div>
