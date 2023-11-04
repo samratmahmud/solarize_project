@@ -16,6 +16,7 @@
     "react-modern-drawer": "^1.2.2"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.6",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

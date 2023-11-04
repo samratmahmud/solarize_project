@@ -4,28 +4,28 @@ import React from "react";
 
 const aboutProps = [
   {
-    pic: "/picture/div (2).svg",
-    num: "1",
-    name: "Tell us about your building",
-    title:
+    thumbneil: "/picture/div (2).svg",
+    index: "1",
+    title: "Tell us about your building",
+    contain:
       "Tell us a bit about your building - what's it made of, where is it located, and what kind of building is it? This will help us get a better understanding of your building and make sure our model can classify it correctly.",
-    btn: "Get started",
+    button: "Get started",
   },
   {
-    pic: "/picture/div (1).svg",
-    num: "2",
-    name: "Tell us more about you",
-    title:
+    thumbneil: "/picture/div (1).svg",
+    index: "2",
+    title: "Tell us more about you",
+    contain:
       "Whether you're a tenant looking to reduce your electricity bills or a landlord interested in increasing your operating margins, this information is crucial for us to provide the best solution for you.",
-    btn: "Get started",
+    button: "Get started",
   },
   {
-    pic: "/picture/div.svg",
-    num: "3",
-    name: "Get your quote",
-    title:
+    thumbneil: "/picture/div.svg",
+    index: "3",
+    title: "Get your quote",
+    contain:
       "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.",
-    btn: "Get started",
+    button: "Get started",
   },
 ];
 
@@ -50,21 +50,21 @@ function About() {
               className="flex md:flex-row flex-col md:even:flex-row-reverse md:gap-12 gap-5 justify-between items-center"
             >
               <div className="md:w-1/2">
-                <img src={item.pic} alt="" />
+                <img src={item.thumbneil} alt="" />
               </div>
               <div>
                 <div className="text-3xl font-medium text-gray-50 bg-red-500 py-3 px-5 rounded-md inline-block mb-6">
-                  {item.num}
+                  {item.index}
                 </div>
                 <div className="md:text-30 text-xl text-gray-900 md:mb-4 mb-2 font-bold">
-                  {item.name}
+                  {item.title}
                 </div>
                 <div className="md:text-base text-md text-neutral-600 mb-7 max-w-[495px]">
-                  {item.title}
+                  {item.contain}
                 </div>
                 <div className="bg-red-500 py-2 px-4 rounded-md inline-block">
                   <Link href={""} className="text-md font-medium text-gray-50">
-                    {item.btn}
+                    {item.button}
                   </Link>
                 </div>
               </div>

@@ -39,7 +39,7 @@ function Footer() {
           ))}
         </div>
         <div className="md:mb-8 mb-4">
-          <Link href={""}>
+          <Link href="https://www.linkedin.com/">
             <img
               className="w-6 m-auto text-center"
               src="/picture/Frame.svg"

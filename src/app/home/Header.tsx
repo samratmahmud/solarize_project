@@ -1,9 +1,30 @@
 "use client";
-import Button from "@/components/common/Button";
 import Customer from "@/components/template/Customer";
 import Metal from "@/components/template/Metal";
-import Link from "next/link";
 import React, {useState} from "react";
+
+const metalCondition = [
+  {
+    thimbneil: `url("/picture/3-1.jpg.png")`,
+    name: "Metal",
+  },
+  {
+    thimbneil: `url("/picture/3-2.jpg.png")`,
+    name: "Concrete",
+  },
+  {
+    thimbneil: `url("/picture/3-3.jpg.png")`,
+    name: "Ground",
+  },
+  {
+    thimbneil: `url("/picture/dont-know.png.png")`,
+    name: "Parking",
+  },
+  {
+    thimbneil: ``,
+    name: "Other",
+  },
+];
 
 function Header() {
   return (
@@ -36,33 +57,21 @@ function Header() {
               Get a lightning fast quote
             </div>
             <div className="flex flex-wrap gap-5">
-              <div
-                className="inline-block w-full md:w-[150px] rounded-lg text-cyan-800"
-                style={{backgroundImage: `url("/picture/3-1.jpg.png")`}}
-              >
-                <Metal name="Metal" />
-              </div>
-              <div
+              {metalCondition.map((item, index) => (
+                <div
+                  key={index}
+                  className="inline-block w-full md:w-[150px] rounded-lg last:text-cyan-800 bg-white text-gray-50"
+                  style={{backgroundImage: `${item.thimbneil}`}}
+                >
+                  <Metal name={item.name} />
+                </div>
+              ))}
+              {/* <div
                 className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
-                style={{backgroundImage: `url("/picture/3-2.jpg.png")`}}
+                style={{backgroundImage: ``}}
               >
-                <Metal name="Concrete" />
-              </div>
-              <div
-                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
-                style={{backgroundImage: `url("/picture/3-3.jpg.png")`}}
-              >
-                <Metal name="Ground" />
-              </div>
-              <div
-                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
-                style={{backgroundImage: `url("/picture/dont-know.png.png")`}}
-              >
-                <Metal name="Parking" />
-              </div>
-              <div className="inline-block rounded-lg text-cyan-800 bg-white w-full md:w-[150px] bg-no-repeat bg-cover">
-                <Metal name="Other" />
-              </div>
+                <Metal name="" />
+              </div> */}
             </div>
           </div>
         </div>

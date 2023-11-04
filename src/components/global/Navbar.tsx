@@ -14,13 +14,16 @@ function Navbar() {
   return (
     <div className="container">
       <div className="flex justify-between gap-3 items-center pt-5 mb-12">
-        <div>
+        <div data-aos="fade-right">
           <Link href={"/"}>
             <img src="/picture/sunrya-dark.svg.svg" alt="" />
           </Link>
         </div>
         <div className="hidden md:block">
-          <div className="flex items-center md:gap-5 gap-2">
+          <div
+            data-aos="fade-left"
+            className="flex items-center md:gap-5 gap-2"
+          >
             <div className="font-medium flex-shrink-0">
               <Link href={"/contract"}>
                 <Button name="Contact Us" />
@@ -37,19 +40,24 @@ function Navbar() {
           <img className="w-12 h-12" src="/picture/icons8-menu-64.png" alt="" />
         </div>
       </div>
-      <div className="">
+      <div className="md:hidden">
         <Drawer open={isOpen} onClose={toggle} direction="left">
           <div className="p-6 h-screen flex flex-col justify-between">
-            <div className="flex flex-col gap-10 text-center">
-              <div className="font-medium">
-                <Link href={""} className="bg-gray-400">
-                  <Button name="Contact Us" />
-                </Link>
-              </div>
-              <div className="bg-red-500 rounded-md font-bold text-gray-50">
-                <Link href={""}>
-                  <Button name="Get Started" />
-                </Link>
+            <div>
+              <Link href={"/"} className="flex justify-center mb-12">
+                <img src="/picture/sunrya-dark.svg.svg" alt="" />
+              </Link>
+              <div className="flex flex-col gap-10 text-center">
+                <div className="font-medium">
+                  <Link href={""} className="bg-gray-400">
+                    <Button name="Contact Us" />
+                  </Link>
+                </div>
+                <div className="bg-red-500 rounded-md font-bold text-gray-50">
+                  <Link href={""}>
+                    <Button name="Get Started" />
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="md:text-md text-xs text-gray-400 text-center">
