@@ -6,10 +6,8 @@ interface buttonProps {
 
 function Button(props: buttonProps) {
   return (
-    <div>
-      <div className="text-md py-2 px-5 rounded-md shadow-md inline-block">
-        {props.name}
-      </div>
+    <div className="text-md py-2 px-5 rounded-md shadow-md inline-block">
+      {props.name}
     </div>
   );
 }

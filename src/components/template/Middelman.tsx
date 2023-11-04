@@ -12,7 +12,7 @@ function Middelman(props: mansProps) {
   let {pic, name, title, learn} = props;
   return (
     <div className="flex md:flex-row flex-col md:gap-16 gap-10 items-center justify-between md:even:flex-row-reverse">
-      <div className="flex_[0_0_50%]">
+      <div data-aos="fade-right" className="flex_[0_0_50%]">
         <div className="md:text-6xl text-xl font-bold md:mb-11 mb-5 text-cyan-950 max-w-[512px]">
           {name}
         </div>
@@ -26,7 +26,7 @@ function Middelman(props: mansProps) {
           {learn}
         </Link>
       </div>
-      <div className="md:w-1/2">
+      <div data-aos="fade-left" className="md:w-1/2">
         <img src={pic} alt="" />
       </div>
     </div>

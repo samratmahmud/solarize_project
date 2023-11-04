@@ -5,7 +5,10 @@ import React from "react";
 function EnergyClean() {
   return (
     <section className="container md:mb-24 mb-10">
-      <div className="flex flex-col md:flex-row md:gap-10 gap-6 justify-between items-center lg:p-10 p-3 max-w-[1024px] m-auto bg-gray-50 md:mb-36 mb-10">
+      <div
+        className="flex flex-col md:flex-row md:gap-10 gap-6 justify-between items-center lg:p-10 p-3 max-w-[1024px] m-auto bg-gray-50 md:mb-36 mb-10"
+        data-aos="zoom-in"
+      >
         <div>
           <div className="text-sm font-medium text-gray-800 uppercase mb-4">
             INcluded
@@ -23,7 +26,7 @@ function EnergyClean() {
           <Button name="Learn More" />
         </div>
       </div>
-      <div className="bg-100 md:py-16 py-7 px-1 rounded-3xl">
+      <div className="bg-100 md:py-16 py-7 px-1 rounded-3xl" data-aos="zoom-in">
         <div className="md:text-5xl text-xl font-extrabold text-gray-50 max-w-[608px] m-auto text-center md:mb-4 mb-2">
           Produce your clean energy. From today.
         </div>

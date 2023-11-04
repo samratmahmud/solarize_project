@@ -44,7 +44,7 @@ function Header() {
               cheaper solar.{" "}
             </div>
           </div>
-          <div>
+          <div data-aos="zoom-in">
             <img src="/picture/Group 26.png" alt="" />
           </div>
         </div>
@@ -59,19 +59,14 @@ function Header() {
             <div className="flex flex-wrap gap-5">
               {metalCondition.map((item, index) => (
                 <div
+                  data-aos="zoom-in"
                   key={index}
-                  className="inline-block w-full md:w-[150px] rounded-lg last:text-cyan-800 bg-white text-gray-50"
+                  className="inline-block w-full md:w-[150px] rounded-lg last:text-cyan-800 bg-no-repeat bg-cover first:text-cyan-800 last:bg-white text-gray-50"
                   style={{backgroundImage: `${item.thimbneil}`}}
                 >
                   <Metal name={item.name} />
                 </div>
               ))}
-              {/* <div
-                className="inline-block rounded-lg text-gray-50 w-full md:w-[150px] bg-no-repeat bg-cover"
-                style={{backgroundImage: ``}}
-              >
-                <Metal name="" />
-              </div> */}
             </div>
           </div>
         </div>

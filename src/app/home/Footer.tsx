@@ -23,16 +23,16 @@ const footerProps = [
 function Footer() {
   return (
     <div className="container">
-      <div className="md:py-12 py-6">
+      <div data-aos="zoom-in" className="md:py-12 py-6">
         <div className="flex justify-center md:gap-10 gap-4 md:mb-8 mb-4">
-          {footerProps.map((name, index) => (
+          {footerProps.map(({url, name}, index) => (
             <div key={index} className="">
               <div className="">
                 <Link
-                  href={name.url}
+                  href={url}
                   className="md:text-md text-sm text-neutral-600 text-center"
                 >
-                  {name.name}
+                  {name}
                 </Link>
               </div>
             </div>

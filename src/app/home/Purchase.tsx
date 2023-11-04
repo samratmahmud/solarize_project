@@ -5,9 +5,9 @@ import React from "react";
 const Details = [
   {
     purch: "Solas-as-a-service",
-    amount: "$0",
-    free: "$0 Upfront cost, pay a monthly Solar-as-a-service fee.",
-    btn: "Get started",
+    dolar: "$0",
+    amount: "$0 Upfront cost, pay a monthly Solar-as-a-service fee.",
+    button: "Get started",
     items: [
       {
         icons: "/picture/icons8-check.svg",
@@ -29,10 +29,10 @@ const Details = [
   },
   {
     purch: "Purchase",
-    amount: "HK$7,800",
+    dolar: "HK$7,800",
     kwp: "/kWp",
-    free: "Purchase a system from HK$7,800 per kilowatt peak.",
-    btn: "Get started",
+    amount: "Purchase a system from HK$7,800 per kilowatt peak.",
+    button: "Get started",
     items: [
       {
         icons: "/picture/icons8-check.svg",
@@ -67,7 +67,7 @@ function Purchase() {
         }}
       >
         <div className="container">
-          <div className="lg:mb-16 mb-7">
+          <div data-aos="zoom-in" className="lg:mb-16 mb-7">
             <div className="lg:text-base text-md font-semibold text-slate-300 mb-2 text-center">
               Pricing
             </div>
@@ -79,44 +79,47 @@ function Purchase() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between gap-5">
-            {Details.map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 lg:px-10 px-3 lg:pt-10 pt-5 pb-6 rounded-md shadow-2xl"
-              >
-                <div className="lg:text-sm text-xs font-medium text-indigo-600 bg-indigo-200 py-1 px-4 rounded-2xl inline-block mb-4">
-                  {item.purch}
-                </div>
-                <div className="flex items-end">
-                  <div className="lg:text-7xl text-4xl text-gray-900 font-extrabold lg:mb-5 mb-2">
-                    {item.amount}
+            {Details.map(
+              ({purch, dolar, amount, kwp, button, items}, index) => (
+                <div
+                  data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
+                  key={index}
+                  className="bg-gray-50 lg:px-10 px-3 lg:pt-10 pt-5 pb-6 rounded-md shadow-2xl"
+                >
+                  <div className="lg:text-sm text-xs font-medium text-indigo-600 bg-indigo-200 py-1 px-4 rounded-2xl inline-block mb-4">
+                    {purch}
                   </div>
-                  <div className="lg:text-xl text-sm font-medium text-neutral-600 lg:mb-5 mb-2">
-                    {item.kwp}
-                  </div>
-                </div>
-                <div className="lg:text-base text-md text-neutral-600 lg:mb-16 mb-6">
-                  {item.free}
-                </div>
-                <div className="lg:mb-6 mb-4 flex flex-col lg:gap-4 gap-2">
-                  {item.items.map((feature, index) => (
-                    <div key={index} className="flex gap-3">
-                      <div>
-                        <img className="w-6" src={feature.icons} alt="" />
-                      </div>
-                      <div className="text-md font-medium text-neutral-600">
-                        {feature.title}
-                      </div>
+                  <div className="flex items-end">
+                    <div className="lg:text-7xl text-4xl text-gray-900 font-extrabold lg:mb-5 mb-2">
+                      {dolar}
                     </div>
-                  ))}
+                    <div className="lg:text-xl text-sm font-medium text-neutral-600 lg:mb-5 mb-2">
+                      {kwp}
+                    </div>
+                  </div>
+                  <div className="lg:text-base text-md text-neutral-600 lg:mb-16 mb-6">
+                    {amount}
+                  </div>
+                  <div className="lg:mb-6 mb-4 flex flex-col lg:gap-4 gap-2">
+                    {items.map(({icons, title}, index) => (
+                      <div key={index} className="flex gap-3">
+                        <div>
+                          <img className="w-6" src={icons} alt="" />
+                        </div>
+                        <div className="text-md font-medium text-neutral-600">
+                          {title}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-red-500 rounded-md py-3 px-5 text-center">
+                    <Link href={""} className="text-md font-bold text-gray-50">
+                      {button}
+                    </Link>
+                  </div>
                 </div>
-                <div className="bg-red-500 rounded-md py-3 px-5 text-center">
-                  <Link href={""} className="text-md font-bold text-gray-50">
-                    {item.btn}
-                  </Link>
-                </div>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </div>

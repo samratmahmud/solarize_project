@@ -3,21 +3,21 @@ import React from "react";
 
 const performing = [
   {
-    pic: "/picture/span.svg",
-    name: "LIDAR",
-    title:
+    icon: "/picture/span.svg",
+    title: "LIDAR",
+    contain:
       "Maximise yield with our LIDAR enabled design, delivering the best performing system in a given environment.",
   },
   {
-    pic: "/picture/span (1).svg",
-    name: "Speed",
-    title:
+    icon: "/picture/span (1).svg",
+    title: "Speed",
+    contain:
       "Simply submit the online form, and we will get back to you within 24 hours with a proposal, without the need for a site visit.",
   },
   {
-    pic: "/picture/span (2).svg",
-    name: "Performanc",
-    title:
+    icon: "/picture/span (2).svg",
+    title: "Performanc",
+    contain:
       "Choose your experienced installer from our network. Let them do the work while we ensure they deliver a high-quality system.",
   },
 ];
@@ -25,7 +25,7 @@ const performing = [
 function Improve() {
   return (
     <div className="container">
-      <div className="md:mb-28 mb-10">
+      <div data-aos="zoom-in" className="md:mb-28 mb-10">
         <div className="bg-200 rounded-xl lg:px-[138px] px-5 lg:pt-36 py-6 lg:pb-28 max-w-[1062px] m-auto md:mb-24 mb-5">
           <div className="md:text-6xl text-30 font-bold text-gray-50 lg:mb-14 mb-6 font-inter">
             Improve your bottom line while reducing your CO2 footprint
@@ -56,21 +56,24 @@ function Improve() {
             your rooftop to work and increase your margins with solar.
           </div>
           <div className="flex flex-col md:flex-row justify-between md:gap-20 gap-12 md:mb-16 mb-8">
-            {performing.map((item, index) => (
-              <div key={index} className="relative z-0">
+            {performing.map(({icon, title, contain}, index) => (
+              <div data-aos="fade-up" key={index} className="relative z-0">
                 <div className="md:mb-8 mb-5 w-12 m-auto">
-                  <img className="" src={item.pic} alt="" />
+                  <img className="" src={icon} alt="" />
                 </div>
                 <div className="text-base font-medium text-neutral-500 md:mb-5 mb-3 text-center">
-                  {item.name}
+                  {title}
                 </div>
-                <div className="text-md text-neutral-600">{item.title}</div>
+                <div className="text-md text-neutral-600">{contain}</div>
                 <div className="absolute top-6 md:-bottom-8 -bottom-4 md:-left-6 -left-3 md:-right-6 -right-3 bg-white -z-10 rounded-lg"></div>
               </div>
             ))}
           </div>
         </div>
-        <div className="bg-red-500 md:p-10 p-2 rounded-lg max-w-[1024px] m-auto">
+        <div
+          data-aos="zoom-in"
+          className="bg-red-500 md:p-10 p-2 rounded-lg max-w-[1024px] m-auto"
+        >
           <div className="flex flex-col md:flex-row justify-between md:gap-10 gap-5 items-center">
             <div>
               <button className="md:text-sm text-xs font-medium uppercase text-gray-800 py-1 px-4 bg-white rounded-xl md:mb-4 mb-2">

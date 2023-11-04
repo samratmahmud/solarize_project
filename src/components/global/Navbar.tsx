@@ -48,13 +48,11 @@ function Navbar() {
                 <img src="/picture/sunrya-dark.svg.svg" alt="" />
               </Link>
               <div className="flex flex-col gap-10 text-center">
-                <div className="font-medium">
-                  <Link href={""} className="bg-gray-400">
-                    <Button name="Contact Us" />
-                  </Link>
-                </div>
+                <Link href={"/contract"} className="font-medium">
+                  <Button name="Contact Us" />
+                </Link>
                 <div className="bg-red-500 rounded-md font-bold text-gray-50">
-                  <Link href={""}>
+                  <Link href={"/"}>
                     <Button name="Get Started" />
                   </Link>
                 </div>

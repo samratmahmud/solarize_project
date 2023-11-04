@@ -23,11 +23,11 @@ function ContractFrom() {
         </div>
         <div>
           <div className="lg:max-w-[580px] border border-slate-100 rounded-md shadow-lg md:p-5 py-5 px-3 mb-5">
-            <div className="grid grid-cols-5 gap-5">
-              <div className="col-span-2">
+            <div className="md:grid grid-cols-5 gap-5">
+              <div className="md:col-span-2">
                 <TextField label="First Name" required />
               </div>
-              <div className="col-span-3">
+              <div className="md:col-span-3">
                 <TextField label="Last Name" required />
               </div>
             </div>
@@ -41,7 +41,7 @@ function ContractFrom() {
             </div>
             <TextField label="Phone Number" required />
           </div>
-          <div className="flex md:justify-end justify-center">
+          <div className="flex md:justify-end justify-start">
             <input
               role="button"
               className="text-md font-bold bg-red-500 py-2 px-16 md:px-5 inline-block rounded-md"
