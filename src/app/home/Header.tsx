@@ -32,7 +32,7 @@ function Header() {
             Tell us more about your roof.
           </div>
           <div className="flex lg:flex-row  flex-col lg:items-center justify-between gap-4">
-            <div className="md:text-6xl text-30 font-bold text-gray-50 lg:max-w-[259px]">
+            <div className="md:text-6xl text-30 font-bold text-gray-50 lg:max-w-[259px] font-inter">
               Get a lightning fast quote
             </div>
             <div className="flex flex-wrap gap-5">

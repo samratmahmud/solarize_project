@@ -51,9 +51,9 @@ const config: Config = {
         "0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10)",
     },
     fontFamily: {
-      inter: ["'Inter'", ...fontFamily.sans],
       "ibm-plex-sans": ["'IBM Plex Sans'", ...fontFamily.sans],
       "ibm-plex-mono": ["'IBM Plex Mono'", ...fontFamily.sans],
+      inter: ["'Inter'", ...fontFamily.sans],
     },
     backgroundImage: {
       100: "linear-gradient(270deg, #0C0C45 0.22%, #FE5424 50.74%)",
@@ -69,7 +69,7 @@ const config: Config = {
     screens: {
       sm: "600px",
       md: "768px",
-      lg: "1024px",
+      lg: "1020px",
       xl: "1248px",
     },
   },

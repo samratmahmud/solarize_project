@@ -33,11 +33,8 @@ function Navbar() {
             </div>
           </div>
         </div>
-        <div
-          onClick={toggle}
-          className="text-2xl font-bold text-gray-950 cursor-pointer md:hidden"
-        >
-          Menu
+        <div role="button" onClick={toggle} className="md:hidden">
+          <img className="w-12 h-12" src="/picture/icons8-menu-64.png" alt="" />
         </div>
       </div>
       <div className="">

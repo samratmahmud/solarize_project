@@ -26,11 +26,11 @@ function Improve() {
   return (
     <div className="container">
       <div className="md:mb-28 mb-10">
-        <div className="bg-200 rounded-xl lg:px-[140px] px-5 lg:pt-36 py-6 lg:pb-28 max-w-[1062px] m-auto md:mb-24 mb-5">
-          <div className="md:text-6xl text-30 font-bold text-gray-50 lg:mb-14 mb-6">
+        <div className="bg-200 rounded-xl lg:px-[138px] px-5 lg:pt-36 py-6 lg:pb-28 max-w-[1062px] m-auto md:mb-24 mb-5">
+          <div className="md:text-6xl text-30 font-bold text-gray-50 lg:mb-14 mb-6 font-inter">
             Improve your bottom line while reducing your CO2 footprint
           </div>
-          <div className="flex flex-col md:flex-row md:gap-10 gap-3 justify-between mb:mb-8 mb-5">
+          <div className="flex flex-col md:flex-row md:gap-9 gap-3 justify-between mb:mb-8 mb-5">
             <div className="md:text-md text-sm text-gray-50">
               Solar energy is the cheapest source of electricity ever, in
               average the levelized cost of electricity produced by solar panels
@@ -76,7 +76,7 @@ function Improve() {
               <button className="md:text-sm text-xs font-medium uppercase text-gray-800 py-1 px-4 bg-white rounded-xl md:mb-4 mb-2">
                 Use Cases
               </button>
-              <div className="md:text-base text-sm text-gray-50">
+              <div className="md:text-base text-sm text-gray-50 font-inter">
                 Check our use cases and find what works for you!
               </div>
             </div>
